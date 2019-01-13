@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:id="@+id/name_text_view"
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/name_text_field"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/name_text_view"
+        android:textColor="@android:color/background_dark"
+        android:inputType="textCapWords"/>
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:id="@+id/message_text_view"
+        android:text="Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_below="@id/name_text_field"/>
+
+    <EditText
+        android:id="@+id/message_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/message_text_view"
+        android:textColor="@android:color/background_dark"
+        android:inputType="textLongMessage"/>
+
+    <TextView
+        android:text=""
+        android:id="@+id/thank_you_message"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/submitFeedback"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/submitFeedback"
+        android:text="submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        android:onClick="sendFeedback"/>
+
+</RelativeLayout>
