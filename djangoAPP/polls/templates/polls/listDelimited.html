@@ -1,0 +1,1 @@
+{% if new_feedback_list %}{% for feedback in new_feedback_list %}{{feedback.id}}&%{{ feedback.feedback_mssg }}&%{{feedback.username}}&%{% endfor %}{% else %}&%{% endif %}

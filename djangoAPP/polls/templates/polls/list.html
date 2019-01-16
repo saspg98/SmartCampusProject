@@ -1,0 +1,10 @@
+{% if new_feedback_list %}
+    Take a look at that feedback! <br>
+    <ul>
+    {% for feedback in new_feedback_list %}
+        <li>[{{feedback.id}}] {{ feedback.feedback_mssg }} , by {{feedback.username}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No feedback was given.</p>
+{% endif %}
