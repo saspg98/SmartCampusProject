@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bumthing.shi.feedback">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:label="Zz Feedback Reader"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DetailActivity"
+            android:launchMode="singleTop"
+            android:label="@string/detail_activity_name"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+
+        <service
+            android:name=".utilities.FeedbackCheckJobService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
